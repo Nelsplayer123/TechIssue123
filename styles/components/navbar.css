@@ -1,0 +1,242 @@
+/* 
+ * TechIssue - Navbar Component Styles
+ * Includes styles for the responsive navigation with sticky behavior
+ */
+
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 11%;
+    z-index: calc(var(--z-index-sticky) * 0.2);
+    background-color: #00081b;
+    box-shadow: var(--shadow-sm);
+    transition: all var(--transition-normal);
+    padding: 1rem 0;
+    
+    
+}
+
+[data-theme="dark"] .navbar {
+    background-color: #212529;
+}
+
+.navbar.scrolled {
+    padding: 0.5rem 0;
+    box-shadow: var(--shadow-md);
+    background-color: #ffffff;
+    border-radius: 0 0 var(--border-radius-lg) var(--border-radius-lg);
+}
+
+[data-theme="dark"] .navbar.scrolled {
+    background-color: #212529;
+}
+
+.navbar__wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* --- Controle o tamanho da logo da navbar aqui --- */
+.navbar__logo {
+    height: 120px; /* Ajuste a altura conforme necessário */
+    width: auto;  /* Mantém a proporção da imagem */
+    display: block;
+    object-fit: contain;
+    /* Você pode ajustar a altura ou a largura acima */
+    margin-right: 1rem; /* Espaço opcional à direita da logo */
+    margin-top: -3rem;
+}
+
+.navbar__img {
+    display: flex;
+    height: 40px;
+    width: auto;
+    top: 0;
+    
+}
+
+.navbar__logo:hover {
+    transform: scale(1.05);
+}
+
+.navbar__toggle {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 21px;
+    cursor: pointer;
+    z-index: var(--z-index-sticky);
+}
+
+.navbar__toggle-bar {
+    width: 100%;
+    height: 3px;
+    background-color: var(--primary-dark);
+    border-radius: 3px;
+    transition: all var(--transition-normal);
+}
+
+.navbar.active .navbar__toggle-bar:nth-child(1) {
+    transform: translateY(9px) rotate(45deg);
+}
+
+.navbar.active .navbar__toggle-bar:nth-child(2) {
+    opacity: 0;
+}
+
+.navbar.active .navbar__toggle-bar:nth-child(3) {
+    transform: translateY(-9px) rotate(-45deg);
+}
+
+.navbar__menu {
+    position: absolute;
+    top: 0;
+    right: -100%;
+    width: 80%;
+    height: 100vh;
+    background-color: var(--bg-light);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    list-style: none;
+    padding: 2rem;
+    box-shadow: var(--shadow-lg);
+    transition: right var(--transition-normal);
+    z-index: var(--z-index-dropdown);
+}
+
+.navbar.active .navbar__menu {
+    right: 0;
+}
+
+.navbar__item {
+    margin: var(--spacing-md) 0;
+}
+
+.navbar__link {
+    font-size: var(--font-size-lg);
+    font-weight: 500;
+    color: var(--text-dark);
+    position: relative;
+    transition: color var(--transition-fast);
+    text-decoration: none;
+}
+
+.navbar__link::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -5px;
+    left: 0;
+    background-image: var(--gradient-primary);
+    transition: width var(--transition-normal);
+}
+
+.navbar__link:hover, 
+.navbar__link.active {
+    color: var(--primary-light);
+}
+
+.navbar__link:hover::after, 
+.navbar__link.active::after {
+    width: 100%;
+}
+
+.navbar__item--cta {
+    margin-top: var(--spacing-lg);
+}
+
+/* Theme Switcher */
+.theme-switcher {
+    margin-left: var(--spacing-md);
+    display: flex;
+    align-items: center;
+}
+
+.theme-toggle {
+    opacity: 0;
+    position: absolute;
+}
+
+.theme-toggle-label {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 50px;
+    height: 26px;
+    border-radius: 50px;
+    background-image: linear-gradient(to right, #f8f9fa, #dee2e6);
+    padding: 5px;
+    cursor: pointer;
+    transition: all var(--transition-normal);
+}
+
+[data-theme="dark"] .theme-toggle-label {
+    background-image: linear-gradient(to right, #495057, #212529);
+}
+
+.theme-toggle-label::after {
+    content: '';
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    background-color: var(--primary-light);
+    transition: all var(--transition-normal);
+}
+
+.theme-toggle:checked + .theme-toggle-label::after {
+    left: calc(100% - 24px);
+    background-color: var(--accent);
+}
+
+.theme-toggle-label .fa-sun {
+    color: #ffc107;
+    font-size: var(--font-size-sm);
+}
+
+.theme-toggle-label .fa-moon {
+    color: #6c757d;
+    font-size: var(--font-size-sm);
+}
+
+/* Responsive Styles */
+@media (min-width: 992px) {
+    .navbar__toggle {
+        display: none;
+    }
+    
+    .navbar__menu {
+        position: static;
+        width: auto;
+        height: auto;
+        background-color: transparent;
+        flex-direction: row;
+        padding: 0;
+        box-shadow: none;
+    }
+    
+    .navbar__item {
+        margin: 0 var(--spacing-md);
+    }
+    
+    .navbar__link {
+        font-size: var(--font-size-base);
+    }
+    
+    .navbar__item--cta {
+        margin-top: 0;
+        margin-left: var(--spacing-lg);
+    }
+
+    
+}

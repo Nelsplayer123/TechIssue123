@@ -1,0 +1,195 @@
+/* Terms of Use Page Styles */
+.terms-of-use {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    background-color: #00081b;
+}
+
+.terms-of-use__content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 3.5rem;
+    background-color: #06122c;
+    border-radius: 2rem;
+    box-shadow: var(--shadow-md);
+    
+    
+}
+
+.terms-of-use__header {
+    text-align: center;
+    margin-bottom: 3rem;
+    padding-bottom: 2rem;
+    border-bottom: 2px solid var(--gray-200);
+}
+
+.terms-of-use__title {
+    font-size: 2.5rem;
+    color: var(--primary);
+    margin-bottom: 1rem;
+}
+
+.terms-of-use__date {
+    color: var(--gray-600);
+    font-size: 1.1rem;
+}
+
+.terms-of-use__section {
+    margin-bottom: 3rem;
+}
+
+.terms-of-use__section-title {
+    font-size: 1.8rem;
+    color: var(--primary);
+    margin-bottom: 1.5rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid var(--gray-200);
+}
+
+.terms-of-use__subsection-title {
+    font-size: 1.4rem;
+    color: var(--gray-800);
+    margin: 1.5rem 0 1rem;
+}
+
+.terms-of-use__subsection h4 {
+    font-size: 1.2rem;
+    color: var(--gray-700);
+    margin: 1rem 0;
+}
+
+.terms-of-use__list {
+    list-style-type: none;
+    padding-left: 1.5rem;
+    margin: 1rem 0;
+}
+
+.terms-of-use__list li {
+    margin-bottom: 0.75rem;
+    position: relative;
+    padding-left: 1.5rem;
+}
+
+.terms-of-use__list li::before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    color: var(--primary);
+}
+
+.terms-of-use__table-container {
+    overflow-x: auto;
+    margin: 1.5rem 0;
+    border-radius: var(--border-radius-md);
+    box-shadow: var(--shadow-sm);
+}
+
+.terms-of-use__table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: var(--white);
+}
+
+.terms-of-use__table th,
+.terms-of-use__table td {
+    padding: 1rem;
+    text-align: left;
+    border-bottom: 1px solid var(--gray-200);
+}
+
+.terms-of-use__table th {
+    background-color: var(--gray-100);
+    font-weight: 600;
+    color: var(--gray-800);
+}
+
+.terms-of-use__table tr:hover {
+    background-color: var(--gray-50);
+}
+
+.terms-of-use__note {
+    color: var(--gray-600);
+    font-style: italic;
+    margin: 1rem 0;
+}
+
+.terms-of-use__warning {
+    color: var(--warning);
+    font-weight: 500;
+    margin: 1rem 0;
+    padding: 0.75rem;
+    background-color: var(--warning-light);
+    border-radius: var(--border-radius-md);
+}
+
+.terms-of-use__disclaimer {
+    background-color: var(--gray-100);
+    padding: 1.5rem;
+    border-radius: var(--border-radius-md);
+    margin: 1.5rem 0;
+    border-left: 4px solid var(--warning);
+}
+
+.terms-of-use__contact {
+    background-color: var(--gray-50);
+    padding: 1.5rem;
+    border-radius: var(--border-radius-md);
+    margin: 1.5rem 0;
+}
+
+.terms-of-use__footer {
+    text-align: center;
+    font-size: 1.2rem;
+    color: var(--primary);
+    margin-top: 2rem;
+    padding-top: 2rem;
+    border-top: 2px solid var(--gray-200);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .terms-of-use__content {
+        padding: 1.5rem;
+    }
+
+    .terms-of-use__title {
+        font-size: 2rem;
+    }
+
+    .terms-of-use__section-title {
+        font-size: 1.5rem;
+    }
+
+    .terms-of-use__subsection-title {
+        font-size: 1.2rem;
+    }
+
+    .terms-of-use__table th,
+    .terms-of-use__table td {
+        padding: 0.75rem;
+        font-size: 0.9rem;
+    }
+    
+    .terms-of-use__disclaimer,
+    .terms-of-use__contact {
+        padding: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .terms-of-use__content {
+        padding: 1rem;
+    }
+
+    .terms-of-use__title {
+        font-size: 1.75rem;
+    }
+
+    .terms-of-use__section-title {
+        font-size: 1.3rem;
+    }
+
+    .terms-of-use__list li {
+        font-size: 0.9rem;
+    }
+}

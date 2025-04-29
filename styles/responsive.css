@@ -1,0 +1,112 @@
+/* 
+ * TechIssue - Responsive CSS
+ * Mobile-first responsive design utilities and breakpoints
+ */
+
+/* Base grid system - mobile first */
+.grid {
+    display: grid;
+    gap: var(--spacing-md);
+    width: 100%;
+}
+
+.grid-1 {
+    grid-template-columns: 1fr;
+}
+
+/* Flex utilities */
+.flex {
+    display: flex;
+}
+
+.flex-col {
+    flex-direction: column;
+}
+
+.flex-wrap {
+    flex-wrap: wrap;
+}
+
+.items-center {
+    align-items: center;
+}
+
+.justify-between {
+    justify-content: space-between;
+}
+
+/* Responsive behavior - adjust body padding for navbar */
+body {
+    padding-top: 70px; /* Altura exata da navbar */
+}
+
+@media screen and (max-width: 992px) {
+    body {
+        padding-top: 70px; /* Manter a mesma altura da navbar */
+    }
+}
+
+/* Tablet (600px to 992px) */
+@media screen and (min-width: 600px) and (max-width: 992px) {
+    .grid-2 {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .flex-md-row {
+        flex-direction: row;
+    }
+}
+
+/* Laptops (992px to 1200px) */
+@media screen and (min-width: 992px) {
+    body {
+        padding-top: 74.69px; /* Manter a mesma altura da navbar */
+    }
+    
+    .grid-2 {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .grid-3 {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    
+    .grid-4 {
+        grid-template-columns: repeat(4, 1fr);
+    }
+    
+    .flex-lg-row {
+        flex-direction: row;
+    }
+}
+
+/* Desktops (1200px or more) */
+@media screen and (min-width: 1200px) {
+    .container {
+        max-width: 1140px;
+    }
+}
+
+/* High-resolution devices (Retina) */
+@media screen and (min-resolution: 192dpi), 
+       screen and (min-resolution: 2dppx) {
+    /* Ensure high quality images for Retina displays */
+    img {
+        image-rendering: -webkit-optimize-contrast;
+    }
+}
+
+/* Utility classes for responsive behavior */
+.hide-on-mobile {
+    display: none;
+}
+
+@media screen and (min-width: 768px) {
+    .hide-on-mobile {
+        display: initial;
+    }
+    
+    .hide-on-desktop {
+        display: none;
+    }
+} 

@@ -1,0 +1,796 @@
+/* 
+ * TechIssue - Serviços (Services) Page Styles
+ * Contains styles specific to the services page
+ */
+
+/* Hero Section */
+.servicos-hero {
+    position: relative;
+    min-height: 50vh;
+    background-image: linear-gradient(to right, rgba(42, 42, 114, 0.9), rgba(0, 159, 253, 0.8)), 
+                      url('../../assets/images/services-bg.jpg');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    color: white;
+    padding: 8rem 0 4rem;
+    margin-top: -78px; /* Adjust based on navbar height */
+}
+
+.servicos-hero__content {
+    text-align: center;
+}
+
+.servicos-hero__title {
+    font-size: var(--font-size-3xl);
+    font-weight: 700;
+    margin-bottom: var(--spacing-sm);
+}
+
+.servicos-hero__text {
+    font-size: var(--font-size-lg);
+    opacity: 0.9;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* Services Cards */
+.servico-card {
+    background-color: var(--bg-light);
+    border-radius: var(--border-radius-lg);
+    box-shadow: var(--shadow-md);
+    overflow: hidden;
+    margin-bottom: var(--spacing-xl);
+    transition: transform var(--transition-normal), box-shadow var(--transition-normal);
+}
+
+.servico-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-xl);
+}
+
+.servico-card__header {
+    background-image: var(--gradient-primary);
+    padding: var(--spacing-lg);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+
+.servico-card__icon {
+    font-size: var(--font-size-2xl);
+    margin-bottom: var(--spacing-sm);
+}
+
+.servico-card__title {
+    margin-bottom: var(--spacing-sm);
+    text-align: center;
+}
+
+.servico-card__tag {
+    position: absolute;
+    top: var(--spacing-md);
+    right: var(--spacing-md);
+    background-color: var(--accent);
+    color: white;
+    padding: 0.25rem 0.5rem;
+    border-radius: 0.25rem;
+    font-size: var(--font-size-xs);
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.servico-card__body {
+    padding: var(--spacing-xl);
+}
+
+.servico-card__destaque {
+    font-size: var(--font-size-md);
+    color: var(--primary-dark);
+    margin-bottom: var(--spacing-lg);
+    padding-bottom: var(--spacing-md);
+    border-bottom: 1px solid var(--gray-300);
+    text-align: center;
+    font-weight: 500;
+}
+
+.servico-card__detalhes {
+    margin-top: var(--spacing-lg);
+}
+
+.beneficios {
+    margin-bottom: var(--spacing-lg);
+}
+
+.beneficios__title {
+    margin-bottom: var(--spacing-md);
+    color: var(--primary-dark);
+}
+
+.beneficios__list {
+    list-style: none;
+    padding: 0;
+}
+
+.beneficios__list li {
+    margin-bottom: var(--spacing-sm);
+    display: flex;
+    align-items: flex-start;
+}
+
+.beneficios__list i {
+    color: var(--success);
+    margin-right: var(--spacing-sm);
+    font-size: var(--font-size-md);
+}
+
+.tecnicas__title {
+    margin-bottom: var(--spacing-md);
+    color: var(--primary-dark);
+}
+
+.chips {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.chip {
+    padding: 0.5rem 0.75rem;
+    background-color: var(--gray-200);
+    border-radius: 1rem;
+    font-size: var(--font-size-xs);
+    display: inline-block;
+}
+
+/* Características Grid */
+.caracteristicas-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--spacing-md);
+    margin-bottom: var(--spacing-lg);
+}
+
+.caracteristica {
+    background-color: var(--bg-gray);
+    border-radius: var(--border-radius-md);
+    padding: var(--spacing-md);
+    transition: all var(--transition-normal);
+}
+
+.caracteristica:hover {
+    background-color: rgba(0, 159, 253, 0.1);
+}
+
+.caracteristica__title {
+    margin-bottom: var(--spacing-xs);
+    color: var(--primary-dark);
+    font-weight: 600;
+}
+
+.caracteristica__text {
+    color: var(--gray-600);
+    margin-bottom: 0;
+    font-size: var(--font-size-sm);
+}
+
+/* Preços */
+.precos {
+    margin-top: var(--spacing-lg);
+}
+
+.precos__title {
+    margin-bottom: var(--spacing-md);
+    color: var(--primary-dark);
+}
+
+.plano {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: var(--spacing-md);
+    background-color: var(--bg-gray);
+    border-radius: var(--border-radius-md);
+    margin-bottom: var(--spacing-sm);
+}
+
+.plano__nome {
+    font-weight: 500;
+}
+
+.plano__preco {
+    font-weight: 700;
+    color: var(--primary-dark);
+}
+
+/* Comparativo */
+.comparativo {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--spacing-md);
+    margin-top: var(--spacing-lg);
+}
+
+.plataforma {
+    background-color: var(--bg-gray);
+    border-radius: var(--border-radius-md);
+    padding: var(--spacing-md);
+    text-align: center;
+    transition: all var(--transition-normal);
+}
+
+.plataforma:hover {
+    background-color: rgba(0, 159, 253, 0.1);
+}
+
+.plataforma__title {
+    margin-bottom: var(--spacing-xs);
+    color: var(--primary-dark);
+}
+
+.plataforma__text {
+    color: var(--gray-600);
+    margin-bottom: 0;
+    font-size: var(--font-size-sm);
+}
+
+/* Comparativo Table */
+.tabela-container {
+    margin-top: var(--spacing-2xl);
+    overflow-x: auto;
+}
+
+.tabela-title {
+    margin-bottom: var(--spacing-lg);
+    text-align: center;
+}
+
+.comparativo-servicos {
+    width: 100%;
+    border-collapse: collapse;
+    border-radius: var(--border-radius-lg);
+    overflow: hidden;
+    box-shadow: var(--shadow-md);
+}
+
+.comparativo-servicos th,
+.comparativo-servicos td {
+    padding: var(--spacing-md);
+    text-align: center;
+    border: 1px solid var(--gray-300);
+}
+
+.comparativo-servicos th {
+    background-color: var(--primary-dark);
+    color: white;
+    font-weight: 600;
+}
+
+.comparativo-servicos th:first-child {
+    text-align: left;
+}
+
+.comparativo-servicos td:first-child {
+    text-align: left;
+    font-weight: 500;
+}
+
+.comparativo-servicos tr:nth-child(even) {
+    background-color: var(--bg-gray);
+}
+
+.comparativo-servicos i.fa-check {
+    color: var(--success);
+}
+
+/* Process Steps */
+.etapas {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--spacing-xl);
+    margin-top: var(--spacing-xl);
+}
+
+.etapa {
+    display: flex;
+    align-items: flex-start;
+    background-color: var(--bg-light);
+    border-radius: var(--border-radius-lg);
+    box-shadow: var(--shadow-md);
+    padding: var(--spacing-lg);
+    transition: all var(--transition-normal);
+}
+
+.etapa:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-lg);
+}
+
+.etapa__numero {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    background-image: var(--gradient-primary);
+    color: white;
+    font-weight: 700;
+    border-radius: 50%;
+    margin-right: var(--spacing-md);
+    flex-shrink: 0;
+}
+
+.etapa__content {
+    flex-grow: 1;
+}
+
+.etapa__title {
+    margin-bottom: var(--spacing-sm);
+    color: var(--primary-dark);
+}
+
+.etapa__text {
+    color: var(--gray-600);
+    margin-bottom: 0;
+}
+
+/* ROI Calculator */
+.calculator {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--spacing-xl);
+    background-color: var(--bg-light);
+    border-radius: var(--border-radius-lg);
+    box-shadow: var(--shadow-md);
+    padding: var(--spacing-xl);
+    margin-top: var(--spacing-xl);
+}
+
+.calculator__form {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-md);
+}
+
+.calculator__result {
+    background-color: var(--bg-gray);
+    border-radius: var(--border-radius-md);
+    padding: var(--spacing-lg);
+    text-align: center;
+}
+
+.resultado-valor {
+    font-size: var(--font-size-2xl);
+    font-weight: 700;
+    color: var(--primary-dark);
+    margin: var(--spacing-md) 0;
+}
+
+.resultado-texto {
+    color: var(--gray-600);
+    margin-bottom: 0;
+}
+
+/* FAQ Section */
+.accordion-container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.accordion {
+    background-color: var(--bg-light);
+    margin-bottom: var(--spacing-md);
+    border-radius: var(--border-radius-md);
+    overflow: hidden;
+    box-shadow: var(--shadow-sm);
+}
+
+.accordion__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: var(--spacing-md) var(--spacing-lg);
+    background-color: var(--bg-light);
+    cursor: pointer;
+    transition: background-color var(--transition-fast);
+}
+
+.accordion__header:hover {
+    background-color: var(--gray-100);
+}
+
+.accordion__title {
+    margin-bottom: 0;
+    font-size: var(--font-size-md);
+    font-weight: 500;
+}
+
+.accordion__icon {
+    transition: transform var(--transition-normal);
+}
+
+.accordion.active .accordion__icon {
+    transform: rotate(180deg);
+}
+
+.accordion__content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height var(--transition-slow);
+    padding: 0 var(--spacing-lg);
+}
+
+.accordion.active .accordion__content {
+    max-height: 300px;
+    padding: var(--spacing-md) var(--spacing-lg);
+    border-top: 1px solid var(--gray-300);
+}
+
+/* Responsive Styles */
+@media (min-width: 576px) {
+    .servicos-hero__title {
+        font-size: var(--font-size-4xl);
+    }
+    
+    .servicos-hero__text {
+        font-size: var(--font-size-xl);
+    }
+}
+
+@media (min-width: 768px) {
+    .servico-card__header {
+        flex-direction: row;
+        justify-content: center;
+        text-align: left;
+    }
+    
+    .servico-card__icon {
+        margin-right: var(--spacing-md);
+        margin-bottom: 0;
+    }
+    
+    .caracteristicas-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .comparativo {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    
+    .etapas {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .calculator {
+        grid-template-columns: 1.5fr 1fr;
+    }
+}
+
+@media (min-width: 992px) {
+    .etapas {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+/* Planos e Investimentos Section */
+.planos {
+    background-color: var(--bg-gray);
+}
+
+/* Planos Tabela Styles */
+.planos-tabela-container, 
+.dominios-container,
+.planos-comparativo,
+.calculadora-container,
+.cta-consulte {
+    background-color: var(--bg-light);
+    border-radius: var(--border-radius-lg);
+    padding: var(--spacing-xl);
+    margin-bottom: var(--spacing-xl);
+    box-shadow: var(--shadow-md);
+}
+
+.planos-title, 
+.dominios-title, 
+.comparativo-title,
+.calculadora-title {
+    color: var(--primary-dark);
+    margin-bottom: var(--spacing-lg);
+    padding-bottom: var(--spacing-sm);
+    border-bottom: 2px solid var(--gray-200);
+}
+
+.table-responsive {
+    overflow-x: auto;
+    width: 100%;
+}
+
+.planos-tabela {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: var(--spacing-md);
+}
+
+.planos-tabela th,
+.planos-tabela td {
+    padding: var(--spacing-md);
+    text-align: left;
+    border-bottom: 1px solid var(--gray-300);
+}
+
+.planos-tabela th {
+    background-color: var(--gray-100);
+    font-weight: 600;
+    color: var(--primary-dark);
+}
+
+.planos-tabela tr.plano-destaque {
+    background-color: rgba(255, 107, 107, 0.05);
+    border-left: 3px solid var(--accent);
+}
+
+.plano-tipo {
+    font-weight: 600;
+    display: block;
+}
+
+.plano-info {
+    margin-left: var(--spacing-xs);
+    color: var(--gray-600);
+    cursor: help;
+}
+
+.plano-badge {
+    display: inline-block;
+    background-color: var(--accent);
+    color: white;
+    padding: 0.2rem 0.5rem;
+    border-radius: 50px;
+    font-size: var(--font-size-xs);
+    margin-top: var(--spacing-xs);
+}
+
+.preco-destacado {
+    font-weight: 700;
+    color: var(--primary-dark);
+    font-size: var(--font-size-md);
+}
+
+.planos-nota {
+    display: block;
+    margin-top: var(--spacing-sm);
+    color: var(--gray-600);
+    font-style: italic;
+}
+
+/* Domínios Lista */
+.dominios-lista {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--spacing-md);
+}
+
+.dominio-item {
+    display: flex;
+    align-items: center;
+    background-color: var(--gray-100);
+    padding: var(--spacing-md);
+    border-radius: var(--border-radius-md);
+    transition: transform var(--transition-fast);
+}
+
+.dominio-item:hover {
+    transform: translateX(5px);
+    background-color: rgba(0, 159, 253, 0.05);
+}
+
+.dominio-item i {
+    color: var(--success);
+    margin-right: var(--spacing-md);
+    font-size: var(--font-size-md);
+}
+
+.dominio-tipo {
+    flex-grow: 1;
+    font-weight: 500;
+}
+
+.dominio-preco {
+    font-weight: 700;
+    color: var(--primary-dark);
+}
+
+/* Cards Comparativo */
+.cards-comparativo {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--spacing-lg);
+    margin-bottom: var(--spacing-md);
+}
+
+.card-plano {
+    background-color: var(--bg-light);
+    border-radius: var(--border-radius-lg);
+    overflow: hidden;
+    border: 1px solid var(--gray-300);
+    transition: all var(--transition-normal);
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.card-plano.plano-destaque {
+    border: 2px solid var(--accent);
+    transform: scale(1.02);
+    box-shadow: 0 4px 15px rgba(255, 107, 107, 0.25);
+    position: relative;
+    z-index: 1;
+}
+
+.card-plano__header {
+    background-image: var(--gradient-primary);
+    color: white;
+    padding: var(--spacing-lg);
+    text-align: center;
+    position: relative;
+}
+
+.card-badge {
+    position: absolute;
+    top: -12px;
+    right: 50%;
+    transform: translateX(50%);
+    background-color: var(--accent);
+    color: white;
+    padding: 0.2rem 0.75rem;
+    border-radius: 50px;
+    font-size: var(--font-size-xs);
+    font-weight: 600;
+    text-transform: uppercase;
+    box-shadow: var(--shadow-sm);
+}
+
+.card-plano__title {
+    margin-bottom: var(--spacing-sm);
+}
+
+.card-plano__preco {
+    font-size: var(--font-size-2xl);
+    font-weight: 700;
+    display: block;
+}
+
+.card-plano__preco small {
+    font-size: var(--font-size-sm);
+    opacity: 0.8;
+}
+
+.card-plano__body {
+    padding: var(--spacing-lg);
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.card-plano__features {
+    list-style: none;
+    padding: 0;
+    margin-bottom: var(--spacing-lg);
+    flex-grow: 1;
+}
+
+.card-plano__features li {
+    margin-bottom: var(--spacing-sm);
+    display: flex;
+    align-items: flex-start;
+}
+
+.card-plano__features i {
+    margin-right: var(--spacing-sm);
+    color: var(--success);
+}
+
+.card-plano__features .feature-disabled {
+    color: var(--gray-500);
+}
+
+.card-plano__features .feature-disabled i {
+    color: var(--gray-500);
+}
+
+/* Calculadora Styles */
+.calculadora-wrapper {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--spacing-xl);
+    background-color: var(--gray-100);
+    border-radius: var(--border-radius-lg);
+    padding: var(--spacing-lg);
+}
+
+.calculadora-form {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-md);
+}
+
+.calculadora-resultado {
+    background-color: var(--bg-light);
+    padding: var(--spacing-lg);
+    border-radius: var(--border-radius-md);
+    text-align: center;
+    box-shadow: var(--shadow-sm);
+}
+
+.calculadora-resultado h4 {
+    margin-bottom: var(--spacing-md);
+    color: var(--primary-dark);
+}
+
+#resultado-investimento {
+    font-size: var(--font-size-2xl);
+    font-weight: 700;
+    color: var(--primary-dark);
+    margin-bottom: var(--spacing-sm);
+}
+
+.resultado-texto {
+    color: var(--gray-600);
+    margin-bottom: var(--spacing-lg);
+}
+
+.economia-anual {
+    background-color: rgba(40, 167, 69, 0.1);
+    color: var(--success);
+    padding: var(--spacing-sm);
+    border-radius: var(--border-radius-md);
+    font-weight: 500;
+    display: flex;
+    justify-content: space-between;
+}
+
+/* CTA Section */
+.cta-consulte {
+    text-align: center;
+}
+
+.cta-consulte h3 {
+    font-size: var(--font-size-2xl);
+    margin-bottom: var(--spacing-sm);
+    color: var(--primary-dark);
+}
+
+.cta-consulte p {
+    color: var(--gray-600);
+    margin-bottom: var(--spacing-lg);
+}
+
+.cta-consulte .btn {
+    margin: 0 var(--spacing-sm) var(--spacing-md);
+}
+
+/* Responsive Styles */
+@media (min-width: 576px) {
+    .dominios-lista {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 768px) {
+    .cards-comparativo {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    
+    .calculadora-wrapper {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (min-width: 992px) {
+    .dominios-lista {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}

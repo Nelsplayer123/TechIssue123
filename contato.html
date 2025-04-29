@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Entre em contato com a TechIssue. Estamos prontos para transformar seu negócio com soluções de IA, sites e aplicativos">
+    <meta name="keywords" content="contato, TechIssue, Angola, chatbot, desenvolvimento web">
+    <title>Contato - TechIssue</title>
+    
+    <!-- CSS Files -->
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/pages/contato.css">
+    <link rel="stylesheet" href="styles/components/animations.css">
+    <link rel="stylesheet" href="styles/components/navbar.css">
+    <link rel="stylesheet" href="styles/components/footer.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Preloader -->
+    <div class="preloader">
+        <div class="preloader__spinner"></div>
+    </div>
+
+    <!-- Navbar Container -->
+    <div id="navbar-container"></div>
+
+    <!-- Hero Section -->
+    <section class="contato-hero">
+        <div class="container">
+            <div class="contato-hero__content">
+                <br>
+                <br>
+                <br>
+                <h1 class="contato-hero__title">Entre em Contato</h1>
+                <p class="contato-hero__text">Estamos prontos para ajudar sua empresa a crescer</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contato section">
+        <div class="container">
+            <div class="contato__wrapper">
+                <div class="contato__info" data-aos="fade-right">
+                    <h2 class="contato__title">Informações de Contato</h2>
+                    <div class="contato__item">
+                        <div class="contato__text">
+                            <h3>Localização</h3>
+                            <p>Luanda, Angola</p>
+                        </div>
+                    </div>
+                    <div class="contato__item">
+                        <div class="contato__text">
+                            <h3>Telefone</h3>
+                            <p>+244 976 599 361</p>
+                        </div>
+                    </div>
+                    <div class="contato__item">
+                        <div class="contato__text">
+                            <h3>Email</h3>
+                            <p>techissue2@gmail.com</p>
+                        </div>
+                    </div>
+                    <div class="contato__social">
+                        <h3>Redes Sociais</h3>
+                        <div class="social-icons">
+                            <a href="https://facebook.com" target="_blank" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                            <a href="https://www.instagram.com/techissueoficial/" target="_blank" class="social-icon"><i class="fab fa-instagram"></i></a>
+                            <a href="https://api.whatsapp.com/send/?phone=244976599361&text&type=phone_number&app_absent=0" target="_blank" class="social-icon"><i class="fab fa-whatsapp"></i></a>
+                            
+                        </div>
+                    </div>
+                </div>
+
+                <div class="contato__form-container" data-aos="fade-left">
+                    <h2 class="contato__title">Envie-nos uma mensagem</h2>
+                    <form id="contactForm" class="contato__form">
+                        <div class="form-group">
+                            <label for="nome">Nome completo</label>
+                            <input type="text" id="nome" name="nome" required>
+                            <span class="error-message" id="nome-error"></span>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" required>
+                            <span class="error-message" id="email-error"></span>
+                        </div>
+                        <div class="form-group">
+                            <label for="telefone">Telefone</label>
+                            <input type="tel" id="telefone" name="telefone" required>
+                            <span class="error-message" id="telefone-error"></span>
+                        </div>
+                        <div class="form-group">
+                            <label for="assunto">Assunto</label>
+                            <select id="assunto" name="assunto" required>
+                                <option value="" disabled selected>Selecione um assunto</option>
+                                <option value="chatbot">Chatbots</option>
+                                <option value="website">Sites</option>
+                                <option value="aplicativo">Aplicativos</option>
+                                <option value="outro">Outro</option>
+                            </select>
+                            <span class="error-message" id="assunto-error"></span>
+                        </div>
+                        <div class="form-group">
+                            <label for="mensagem">Mensagem</label>
+                            <textarea id="mensagem" name="mensagem" rows="5" required></textarea>
+                            <span class="error-message" id="mensagem-error"></span>
+                        </div>
+                        <div class="form-group checkbox-group">
+                            <input type="checkbox" id="termos" name="termos" required>
+                            <label for="termos">Concordo com os termos de privacidade</label>
+                            <span class="error-message" id="termos-error"></span>
+                        </div>
+                        <button type="submit" class="btn btn--primary">Enviar Mensagem</button>
+                    </form>
+                    <div id="form-success" class="form-success">
+                        <i class="fas fa-check-circle"></i>
+                        <h3>Mensagem Enviada!</h3>
+                        <p>Obrigado pelo seu contato. Retornaremos em breve.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    
+
+   
+    <!-- Footer Container -->
+    <div id="footer-container"></div>
+
+    <!-- JavaScript Files -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        // Initialize AOS
+        AOS.init({
+            duration: 800,
+            easing: 'ease-in-out',
+            once: true
+        });
+    </script>
+    <script src="js/main.js"></script>
+    <script src="js/contact-form.js"></script>
+</body>
+</html>
